@@ -13,7 +13,9 @@ public class Kruznica {
 
         System.out.println("POV:" + izracunajPovrsinu(r));
         float pov = izracunajPovrsinu(r);
-        System.out.println(pov);
+        System.out.println("POV:" + pov);
+
+        System.out.println("POV1:" + izracunajPovrsinu(r,Math.PI));
 
         izracunajOpseg(r);
     }
@@ -22,6 +24,15 @@ public class Kruznica {
         float pov = (float) (r*r*Math.PI);
         return pov;
     }
+
+    static float izracunajPovrsinu(float r, double pi){
+        return (float)(r*r*Math.PI);
+    }
+
+    /* static double izracunajPovrsinu(float r, double pi){
+        return (float)(r*r*Math.PI);
+    }
+    u potpis metode ide ime metode i argumenti*/
 
     static void izracunajOpseg(float r){
         float opseg = (float) (2*r*Math.PI);
