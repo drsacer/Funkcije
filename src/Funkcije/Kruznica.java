@@ -11,13 +11,27 @@ public class Kruznica {
         System.out.println("Unesite polumjer kružnice:");
         float r = s.nextFloat();
 
-        System.out.println("POV:" + izracunajPovrsinu(r));
+        System.out.println("Opseg ili površina kružnica ?  O/P");
+        String unos = s.next();
+
+        switch (unos){
+            case "O":
+                izracunajOpseg(r);
+                break;
+            case "P":
+                System.out.println(izracunajPovrsinu(r));
+                break;
+            default:
+                System.out.println("Krivi odabir");
+        }
+
+     /*   System.out.println("POV:" + izracunajPovrsinu(r));
         float pov = izracunajPovrsinu(r);
         System.out.println("POV:" + pov);
 
         System.out.println("POV1:" + izracunajPovrsinu(r,Math.PI));
 
-        izracunajOpseg(r);
+        izracunajOpseg(r);*/
     }
 
     static float izracunajPovrsinu(float r){
