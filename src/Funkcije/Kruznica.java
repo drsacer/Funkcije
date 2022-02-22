@@ -11,13 +11,16 @@ public class Kruznica {
         System.out.println("Unesite polumjer kružnice:");
         float r = s.nextFloat();
 
-        izracunajPovrsinu(r);
+        System.out.println("POV:" + izracunajPovrsinu(r));
+        float pov = izracunajPovrsinu(r);
+        System.out.println(pov);
+
         izracunajOpseg(r);
     }
 
-    static void izracunajPovrsinu(float r){
+    static float izracunajPovrsinu(float r){
         float pov = (float) (r*r*Math.PI);
-        System.out.println("POV:" + pov);
+        return pov;
     }
 
     static void izracunajOpseg(float r){
